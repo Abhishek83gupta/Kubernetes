@@ -5,7 +5,7 @@
 1) Launch new Ubuntu VM using AWS Ec2 ( t2.micro )	  
 2) Connect to VM machine (e.g Mobaxterm, gitbash)
 
-3) Install AWS CLI using below commands 
+3) Install AWS CLI
 ```
 sudo apt install unzip
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -14,14 +14,14 @@ sudo ./aws/install
 aws --version
 ```
 
-4) Install eksctl using below commands
+4) Install eksctl
 ```
 curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
 sudo mv /tmp/eksctl /usr/local/bin
 eksctl version
 ```
 
-5) Install kubectl using below commands  
+5) Install kubectl
 ```
 curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.19.6/2021-01-05/bin/linux/amd64/kubectl
 chmod +x ./kubectl
@@ -70,11 +70,11 @@ eksctl create cluster --name cluster-name  \
 
 ## N. Virgina: <br/>
 ```
-eksctl create cluster --name ashokit-cluster4 --region us-east-1 --node-type t2.medium  --zones us-east-1a,us-east-1b
+eksctl create cluster --name my-cluster --region us-east-1 --node-type t2.medium  --zones us-east-1a,us-east-1b
 ```
 ## Mumbai: <br/>
 ```
-eksctl create cluster --name ashokit-cluster4 --region ap-south-1 --node-type t2.medium  --zones ap-south-1a,ap-south-1b
+eksctl create cluster --name my-cluster --region ap-south-1 --node-type t2.medium  --zones ap-south-1a,ap-south-1b
 ```
 
 ## Note: Cluster creation will take 5 to 10 mins of time (we have to wait). After cluster created we can check nodes using below command.
@@ -90,5 +90,5 @@ eksctl create cluster --name ashokit-cluster4 --region ap-south-1 --node-type t2
 ## Step - 4 : After your practise, delete Cluster and other resources we have used in AWS Cloud to avoid billing ##
 
 ```
-eksctl delete cluster --name ashokit-cluster4 --region ap-south-1
+eksctl delete cluster --name my-cluster --region ap-south-1
 ```
