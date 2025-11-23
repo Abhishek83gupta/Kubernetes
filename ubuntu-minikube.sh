@@ -16,6 +16,7 @@ echo "$(cat kubectl.sha256) kubectl" | sha256sum --check
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
 # Minikube
+# Docs : https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Fx86-64%2Fstable%2Fbinary+download
 sudo curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo mv minikube-linux-amd64 /usr/local/bin/minikube
 sudo chmod +x /usr/local/bin/minikube
