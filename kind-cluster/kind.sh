@@ -23,5 +23,5 @@ sudo mv ./kind /usr/local/bin/kind
 kind --version
 
 # kind create cluster 
-# kind create cluster --name=my-cluster
-# kind create cluster --config kind-config.yaml --name my-cluster 
+# kind create cluster --name my-cluster
+# kind create cluster --config kind-config.yal --name my-cluster 
