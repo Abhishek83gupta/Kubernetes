@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+# Execute on Both "Master" & "Worker" Nodes
+
 # Update system
 yum update -y                                     
 
