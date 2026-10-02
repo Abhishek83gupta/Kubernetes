@@ -63,9 +63,8 @@ kind create cluster --config=kind-config.yaml --name=my-cluster
 
 ```bash
 kubectl cluster-info --context=kind-my-cluster
-kind get clusters
 kubectl get nodes
-kubectl get pods -A
+kind get clusters
 ```
 
 
